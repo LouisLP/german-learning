@@ -1,35 +1,26 @@
 @import './base.css';
+@import 'tailwindcss';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+/* Custom components */
+@layer components {
+  .case-nom {
+    @apply text-nominativ font-medium;
   }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+  .case-akk {
+    @apply text-akkusativ font-medium;
+  }
+  .case-dat {
+    @apply text-dativ font-medium;
+  }
+  .case-gen {
+    @apply text-genitiv font-medium;
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 m-4;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold mb-4 text-gray-800 dark:text-white;
   }
 }
